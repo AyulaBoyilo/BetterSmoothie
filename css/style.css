@@ -1,0 +1,917 @@
+/* Resets and Border box */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+h2,
+h3 {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+}
+h2 {
+  font-size: 34px;
+}
+h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+p,
+a,
+input[type="submit"] {
+  font-size: 14px;
+}
+
+a {
+  display: inline-block;
+  color: #000;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  border-bottom: 2px dotted #555;
+}
+a:visited {
+  color: #000;
+}
+header,
+.featured,
+.featured-2,
+.advice-gallery,
+.advice-cards,
+.contact {
+  padding: 0 40px;
+}
+.btn {
+  display: inline;
+  padding: 10px 20px;
+  background: var(--NPblue);
+  color: #fff;
+}
+.btn:hover {
+  background: #47b3b6;
+}
+
+/******************************************
+/* UTILITY CLASSES
+/*******************************************/
+
+:root {
+  --NPyellow: #fed85f;
+  --NPblue: #5abcbf;
+  --NPlightblue: #ebf8f9;
+  --NPgreen: #6bc75d;
+  --NPlightgreen: #eef9ec;
+  --NPpurple: #b23c8a;
+  --NPlightpurple: #fbecf6;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Header */
+header {
+  min-height: 400px;
+  background: url(../img/header_bg.jpg) no-repeat -100px 0px / cover;
+}
+.author,
+.banner-txt {
+  width: 70vw;
+}
+.author {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 50px;
+  border-bottom: 1px solid #000;
+}
+.author img {
+  width: 20px;
+  margin-right: 10px;
+}
+.author p {
+  display: inline-block;
+  font-style: italic;
+  font-size: 12.5px;
+}
+.banner-txt h1 {
+  border-left: 10px solid var(--NPyellow);
+  height: 70px;
+  padding-left: 10px;
+  margin-left: -20px;
+}
+/* Header End */
+
+/* Featured */
+.featured h2 {
+  padding-bottom: 20px;
+}
+.featured img {
+  width: 50px;
+  margin: 35px auto;
+}
+.article {
+  margin-bottom: 70px;
+}
+.food,
+.natural,
+.weight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  margin-bottom: 20px;
+  height: 350px;
+  color: #fff;
+}
+.food {
+  background: var(--NPblue);
+}
+.natural {
+  background: var(--NPgreen);
+}
+.weight {
+  background: var(--NPpurple);
+}
+/* Featured End */
+
+.fruit {
+  margin: 0 0 40px 0;
+}
+.fruit img {
+  width: 100%;
+}
+
+/* Featured-2 */
+.featured-2 {
+  background: url("../img/green_tomatoes_bg.jpg") no-repeat center center /
+    cover;
+  height: 500px;
+}
+.featured-2 .article {
+  background: #fff;
+  padding: 40px 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  width: 70vw;
+  position: relative;
+  margin: 0 auto;
+  transform: translateY(-150px);
+}
+.featured-2 h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+/* Featured-2 End */
+
+/* Challenge */
+.challenge {
+  margin: 70px 60px;
+}
+.intro {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.intro h2 {
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+.steps {
+  text-align: center;
+}
+.steps h3 {
+  font-size: 22px;
+}
+.nutrition,
+.strength,
+.measure {
+  padding: 80px 30px 50px 30px;
+  margin-top: 75px;
+  position: relative;
+}
+.nutrition img,
+.strength img,
+.measure img {
+  position: absolute;
+  height: 100px;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+.nutrition {
+  background: var(--NPlightblue);
+}
+.strength {
+  background: var(--NPlightgreen);
+}
+.measure {
+  background: var(--NPlightpurple);
+}
+.nutrition .bar-horizontal,
+.strength .bar-horizontal,
+.measure .bar-horizontal {
+  width: 35px;
+  margin: 25px auto;
+}
+.nutrition .bar-horizontal {
+  border-bottom: 7px solid var(--NPblue);
+}
+.strength .bar-horizontal {
+  border-bottom: 7px solid var(--NPgreen);
+}
+.measure .bar-horizontal {
+  border-bottom: 7px solid var(--NPpurple);
+}
+/* Challenge End */
+
+/* Advice Gallery */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.advice-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advice-gallery a {
+  border-bottom: none;
+  color: #fff;
+}
+.advice-gallery .btn {
+  margin-bottom: 40px;
+}
+.advice-gallery .intro {
+  margin-bottom: 40px;
+}
+.column {
+  width: 100%;
+}
+.column > div {
+  height: 450px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.column > div > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.column img {
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+.column .img-2 img,
+.column .img-3 img,
+.column .img-6 img {
+  height: 100%;
+  width: auto;
+}
+.column:nth-child(2) > div {
+  height: 300px;
+}
+.column:nth-child(2) img {
+  align-self: flex-end;
+}
+/* Advice Gallery End */
+
+/* Advice Cards */
+.advice-cards {
+  background: var(--NPlightblue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advice-cards .intro {
+  padding: 70px 0 50px 0;
+  margin: 0;
+}
+.advice-cards a {
+  border: none;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.card {
+  background: #fff;
+  margin-bottom: 40px;
+}
+.card h3,
+.card p {
+  padding: 20px 15px;
+}
+.card h3 {
+  margin-bottom: 0;
+}
+.card p {
+  padding-top: 0;
+}
+.card img {
+  width: 100%;
+  align-self: center;
+}
+.img-container {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+/* Advice Cards End */
+
+/* Contact */
+.contact,
+.contact form {
+  background: var(--NPlightblue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact .intro {
+  margin-bottom: 40px;
+  padding-top: 50px;
+}
+input[name],
+input[email],
+textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  outline: none;
+  border: 1px solid var(--NPblue);
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+textarea {
+  resize: none;
+  height: 120px;
+}
+input[type="submit"] {
+  outline: none;
+  border: none;
+  margin: 20px auto 50px auto;
+  cursor: pointer;
+}
+/* Contact End */
+
+/* Footer */
+footer {
+  background: var(--NPblue);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+footer .content .column {
+  flex: 1;
+  width: auto;
+  padding: 40px;
+}
+footer h5 {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+footer p {
+  font-size: 13px;
+}
+footer .copy {
+  padding: 40px;
+}
+/* Footer End */
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+/* Extra small devices (phones, 350px and down) */
+@media only screen and (max-width: 360px) {
+  header {
+    min-height: 400px;
+    background: url(../img/header_bg.jpg) no-repeat -150px 0px / cover;
+  }
+  .author,
+  .banner-txt {
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 420px) and (max-width: 768px) {
+  header {
+    background-position: 0 0;
+  }
+  .column .img-3 img,
+  .column .img-6 img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Medium devices (Tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  p,
+  a,
+  input[type="submit"] {
+    font-size: 17px;
+    line-height: 28px;
+  }
+  header,
+  .featured,
+  .featured-2,
+  .advice-gallery,
+  .advice-cards,
+  .contact {
+    padding: 0 60px;
+  }
+  /* Header */
+  header {
+    background-position: -15vw 0;
+    height: 75vw;
+  }
+  .author,
+  .banner-txt {
+    width: 50vw;
+  }
+  h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .banner-txt h1 {
+    border-left: 10px solid var(--NPyellow);
+    height: 120px;
+    padding-left: 10px;
+    margin-left: -20px;
+  }
+  .author img {
+    width: 25px;
+    margin-right: 15px;
+  }
+  .author p {
+    font-size: 14px;
+  }
+  /* Featured */
+  .featured-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+    margin-top: -50px;
+  }
+  .food p,
+  .natural p,
+  .weight p {
+    margin-bottom: 30px;
+  }
+  .article,
+  .food,
+  .natural,
+  .weight {
+    height: auto;
+  }
+  .fruit {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+    padding-top: 20px;
+  }
+  .fruit img {
+    width: 70%;
+  }
+  /* Featured-2 */
+  .featured-2 {
+    background: url("../img/green_tomatoes_bg.jpg") no-repeat center center /
+      cover;
+    height: 500px;
+  }
+  .featured-2 .article {
+    padding: 40px 40px;
+    width: 45vw;
+    position: relative;
+    margin: 0;
+    left: 0;
+    transform: translateY(-150px);
+  }
+  /* Challenge */
+  .steps {
+    display: flex;
+    justify-content: space-between;
+  }
+  .intro {
+    width: 55vw;
+    max-width: 500px;
+    margin: 0 auto 100px auto;
+  }
+  .intro h2 {
+    font-size: 40px;
+  }
+  .steps h3 {
+    font-size: 2.5vw;
+    line-height: 3.3vw;
+  }
+  .steps p {
+    font-size: 1.6vw;
+    line-height: 2.2vw;
+  }
+  .nutrition,
+  .strength,
+  .measure {
+    width: 26vw;
+    margin-top: 0;
+  }
+  /* Advice Gallery */
+  .gallery {
+    justify-content: space-between;
+  }
+  .advice-gallery .intro {
+    padding: 30px 0;
+  }
+  .column:first-child,
+  .column:nth-child(2) {
+    width: 46.75%;
+  }
+  .column:nth-child(2) > div {
+    height: 287px;
+  }
+  .column:last-child {
+    flex: 2;
+  }
+  .column:last-child .img-6 img {
+    height: auto;
+    min-width: calc(100vw - 60px);
+  }
+  .column:last-child .img-7 img {
+    position: relative;
+    transform: translateY(-100px);
+  }
+  .column .img-3 img {
+    height: 100%;
+    width: auto;
+  }
+  /* Advice Cards */
+  .cards {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    justify-content: space-between;
+  }
+  .card {
+    flex: 1;
+    margin-right: 2vw;
+  }
+  .card:last-child {
+    margin-right: 0;
+  }
+  .img-container {
+    height: 220px;
+  }
+  /* Contact */
+  .contact form {
+    width: 60vw;
+  }
+  /* Footer */
+  footer .content {
+    flex-direction: row;
+  }
+}
+
+/* Large devices (laptops/desktops, 1025px and up) */
+@media only screen and (min-width: 1025px) {
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 42px;
+  }
+  h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  p,
+  a,
+  input[type="submit"] {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  a {
+    padding-top: 30px;
+  }
+  header,
+  .featured,
+  .featured-2,
+  .challenge,
+  .advice-gallery,
+  .advice-cards,
+  .contact {
+    padding: 0 5vw;
+  }
+  /* Header */
+  header {
+    height: 100vh;
+    background: url(../img/header_bg.jpg) no-repeat center center / cover;
+  }
+  .author,
+  .banner-txt {
+    width: 50vw;
+    max-width: 550px;
+  }
+  .author img {
+    width: 30px;
+    margin-right: 20px;
+  }
+  .author p {
+    font-size: 16px;
+  }
+  .banner-txt h1 {
+    height: 120px;
+    padding-left: 20px;
+    margin-left: -20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+  }
+  /* Featured */
+  .featured-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+    margin-top: -45vh;
+  }
+  .article {
+    grid-column: 1 / 4;
+  }
+  .article h2,
+  .article p {
+    width: 40vw;
+    max-width: 550px;
+  }
+  .featured img:last-child {
+    padding-left: 50%;
+  }
+  .fruit img {
+    width: 50%;
+  }
+  /* Featured-2 */
+  .featured-2 {
+    background: url("../img/green_tomatoes_bg.jpg") no-repeat center center /
+      cover;
+    height: 50vh;
+  }
+  .featured-2 h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+  .featured-2 .article {
+    width: 500px;
+    padding: 60px;
+    transform: translateY(-200px);
+  }
+  .featured-2 .article h2,
+  .featured-2 .article p {
+    width: auto;
+    max-width: none;
+  }
+  /* Challenge */
+  .steps h3 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .steps p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .nutrition,
+  .strength,
+  .measure {
+    padding: 80px 3.125vw 50px 3.125vw;
+    width: 25vw;
+  }
+  .intro {
+    max-width: none;
+    width: 45vw;
+    min-width: 800px;
+  }
+  /* Advice Gallery */
+  .gallery .column {
+    width: 30%;
+    flex: none;
+  }
+  .advice-gallery .intro {
+    padding: 70px 0;
+  }
+  .gallery .column .img-1 img {
+    min-height: 450px;
+  }
+  .gallery .column:last-child .img-6 img {
+    height: auto;
+    align-self: center;
+    min-width: 425px;
+  }
+  .gallery .column:last-child .img-7 img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    min-width: auto;
+  }
+  .column:last-child .img-7 img {
+    transform: translateY(0);
+  }
+  /* Advice Cards */
+  .cards {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    justify-content: space-between;
+  }
+  .card .img-container {
+    height: 300px;
+  }
+  .card h3,
+  .card p {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .card h3 {
+    padding-top: 30px;
+  }
+  .card p {
+    padding-bottom: 30px;
+  }
+  .img-container {
+    height: 220px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+  .column > div {
+    height: 400px;
+  }
+  .column:nth-child(2) > div {
+    height: 253px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+  header,
+  .featured,
+  .featured-2,
+  .challenge,
+  .advice-gallery,
+  .advice-cards,
+  .contact {
+    padding: 0 12vw;
+  }
+  /* Featured */
+  .featured-container {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: -10vh;
+  }
+  .article {
+    grid-column: 1;
+  }
+  .article h2,
+  .article p {
+    width: auto;
+    max-width: none;
+  }
+  .fruit {
+    padding-right: 10vw;
+    padding-top: 30px;
+  }
+  /* Featured-2 */
+  .featured-2 {
+    height: 60vh;
+  }
+  /* Challenge */
+  .intro {
+    width: 45vw;
+    max-width: none;
+  }
+  .nutrition,
+  .strength,
+  .measure {
+    width: 21vw;
+  }
+  /* Advice Cards */
+  .card h3,
+  .card p {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .card h3 {
+    padding-top: 50px;
+  }
+  .card p {
+    padding-bottom: 50px;
+  }
+  /* Contact */
+  .contact form {
+    width: 40vw;
+  }
+  input[name],
+  input[email],
+  textarea {
+    font-size: 17px;
+  }
+}
+
+/* Landscape orientation only phones*/
+@media only screen and (orientation: landscape) and (max-width: 750px) {
+  header {
+    background: url(../img/header_bg.jpg) no-repeat 0 0 / cover;
+  }
+  .author,
+  .banner-txt {
+    width: 50vw;
+  }
+  /* Featured */
+  .featured-container {
+    margin-top: -70px;
+  }
+  .featured .article {
+    width: 60vw;
+    margin-top: 20px;
+  }
+  .featured .article p {
+    width: 60vw;
+  }
+  .featured p {
+    width: 40vw;
+  }
+  /* Featured-2 */
+  .featured-2 {
+    height: 350px;
+  }
+  .featured-2 .article {
+    padding: 40px 40px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    width: 45vw;
+    position: relative;
+    margin: 0;
+    left: 0;
+    transform: translateY(-150px);
+  }
+  /* Challenge */
+  .challenge {
+    width: 55vw;
+    margin: 70px auto;
+  }
+  /* Advice Gallery */
+  .column .img-2 img,
+  .column .img-3 img,
+  .column .img-6 img {
+    height: auto;
+    width: 100%;
+  }
+  .column .img-4 img,
+  .column .img-5 img,
+  .column .img-7 img {
+    align-self: none;
+    position: relative;
+  }
+  .column .img-4 img {
+    transform: translateY(200px);
+  }
+  .column .img-5 img {
+    transform: translateY(100px);
+  }
+  .column .img-7 img {
+    transform: translateY(-100px);
+  }
+}
